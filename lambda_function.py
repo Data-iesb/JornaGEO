@@ -1,10 +1,12 @@
 import json
 import boto3
 import uuid
+import os
 from datetime import datetime
 
 dynamodb = boto3.resource('dynamodb')
-table = dynamodb.Table('jornageo-registrations')
+table_name = os.environ.get('DYNAMODB_TABLE', 'jornageo-registrations')
+table = dynamodb.Table(table_name)
 
 def lambda_handler(event, context):
     headers = {

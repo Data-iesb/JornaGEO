@@ -317,6 +317,12 @@ resource "aws_lambda_function" "registration" {
   handler         = "lambda_function.lambda_handler"
   runtime         = "python3.9"
   source_code_hash = data.archive_file.lambda_zip.output_base64sha256
+
+  environment {
+    variables = {
+      DYNAMODB_TABLE = aws_dynamodb_table.registrations.name
+    }
+  }
 }
 
 data "archive_file" "lambda_zip" {
@@ -342,6 +348,36 @@ resource "aws_iam_role" "lambda_role" {
 resource "aws_iam_role_policy_attachment" "lambda_basic" {
   policy_arn = "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
   role       = aws_iam_role.lambda_role.name
+}
+
+resource "aws_dynamodb_table" "registrations" {
+  name           = "jornageo-registrations"
+  billing_mode   = "PAY_PER_REQUEST"
+  hash_key       = "email"
+
+  attribute {
+    name = "email"
+    type = "S"
+  }
+
+  tags = {
+    Name = "JornaGEO Registrations"
+  }
+}
+
+resource "aws_dynamodb_table" "speakers" {
+  name           = "jornageo-speakers"
+  billing_mode   = "PAY_PER_REQUEST"
+  hash_key       = "speaker_id"
+
+  attribute {
+    name = "speaker_id"
+    type = "S"
+  }
+
+  tags = {
+    Name = "JornaGEO Speakers"
+  }
 }
 
 resource "aws_iam_role_policy" "lambda_dynamodb" {
