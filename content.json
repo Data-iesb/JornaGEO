@@ -1,0 +1,138 @@
+{
+  "hero": {
+    "tag": "Evento 2025",
+    "title": "JornaGEO 2025",
+    "description": "1ª Jornada de Gestão de Organizações - O principal evento de gestão organizacional do Centro-Oeste. Conecte-se com líderes, gestores e profissionais da área.",
+    "primaryButton": "Inscreva-se Gratuitamente",
+    "secondaryButton": "Ver Programação",
+    "stats": {
+      "participants": "300+",
+      "participantsLabel": "participantes esperados",
+      "days": "2",
+      "daysLabel": "dias de evento"
+    }
+  },
+  "about": {
+    "title": "Sobre o Evento",
+    "subtitle": "Transformando organizações através da gestão eficiente",
+    "mainTitle": "Uma Jornada de Liderança",
+    "description": "A JornaGEO 2025 é o primeiro evento dedicado à Gestão de Organizações na região Centro-Oeste. Nossa missão é promover o intercâmbio de conhecimentos, experiências e inovações entre gestores, líderes e profissionais da área.",
+    "features": [
+      {
+        "title": "🎯 Palestras Estratégicas",
+        "description": "Líderes empresariais compartilhando estratégias de gestão eficazes"
+      },
+      {
+        "title": "🔧 Workshops Práticos",
+        "description": "Sessões hands-on para desenvolvimento de competências gerenciais"
+      },
+      {
+        "title": "🤝 Networking Executivo",
+        "description": "Oportunidades de conexão com profissionais e empresários"
+      },
+      {
+        "title": "📊 Cases de Sucesso",
+        "description": "Apresentação de casos reais de transformação organizacional"
+      }
+    ]
+  },
+  "schedule": {
+    "title": "Programação",
+    "subtitle": "Dois dias intensivos de aprendizado e networking",
+    "days": [
+      {
+        "date": "15 de Março",
+        "day": "Dia 1",
+        "sessions": [
+          {
+            "time": "08:00 - 09:00",
+            "title": "Credenciamento e Coffee Break",
+            "type": "break"
+          },
+          {
+            "time": "09:00 - 10:30",
+            "title": "Abertura: Tendências em Gestão Organizacional",
+            "speaker": "Dr. <nome>",
+            "type": "keynote"
+          },
+          {
+            "time": "10:30 - 12:00",
+            "title": "Workshop: Liderança Transformacional",
+            "speaker": "Prof. <nome>",
+            "type": "workshop"
+          },
+          {
+            "time": "14:00 - 15:30",
+            "title": "Gestão de Pessoas na Era Digital",
+            "speaker": "<nome>",
+            "type": "talk"
+          },
+          {
+            "time": "15:30 - 17:00",
+            "title": "Mesa Redonda: Inovação Organizacional",
+            "type": "panel"
+          }
+        ]
+      },
+      {
+        "date": "16 de Março",
+        "day": "Dia 2",
+        "sessions": [
+          {
+            "time": "09:00 - 10:30",
+            "title": "Estratégias de Crescimento Sustentável",
+            "speaker": "<nome>",
+            "type": "keynote"
+          },
+          {
+            "time": "10:30 - 12:00",
+            "title": "Workshop: Gestão de Projetos Ágeis",
+            "speaker": "<nome>",
+            "type": "workshop"
+          },
+          {
+            "time": "14:00 - 15:30",
+            "title": "Transformação Digital nas Organizações",
+            "speaker": "<nome>",
+            "type": "talk"
+          },
+          {
+            "time": "15:30 - 16:30",
+            "title": "Encerramento e Networking",
+            "type": "networking"
+          }
+        ]
+      }
+    ]
+  },
+  "registration": {
+    "title": "Inscrição",
+    "subtitle": "Garante sua vaga no maior evento de gestão organizacional",
+    "price": "Gratuito",
+    "includes": [
+      "Acesso a todas as palestras e workshops",
+      "Material didático digital",
+      "Coffee breaks",
+      "Certificado de participação",
+      "Acesso ao networking exclusivo"
+    ],
+    "form": {
+      "fields": [
+        {"name": "name", "label": "Nome Completo", "type": "text", "required": true},
+        {"name": "email", "label": "E-mail", "type": "email", "required": true},
+        {"name": "organization", "label": "Organização", "type": "text", "required": false},
+        {"name": "position", "label": "Cargo/Função", "type": "text", "required": false},
+        {"name": "phone", "label": "Telefone", "type": "tel", "required": false},
+        {"name": "management_area", "label": "Área de Gestão", "type": "select", "required": false, "options": [
+          "Gestão Geral",
+          "Recursos Humanos",
+          "Gestão Financeira",
+          "Gestão de Projetos",
+          "Gestão de Operações",
+          "Gestão Estratégica",
+          "Outro"
+        ]}
+      ]
+    }
+  }
+}

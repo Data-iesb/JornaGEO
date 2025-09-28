@@ -1,0 +1,27 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.9
+  pre_build:
+    commands:
+      - echo Logging in to Amazon ECR...
+      - pip install boto3
+  build:
+    commands:
+      - echo Build started on `date`
+      - echo Creating DynamoDB tables...
+      - python create_tables.py
+      - echo Syncing website files to S3...
+      - aws s3 sync . s3://jornageo.dataiesb.com --exclude "*.tf" --exclude "*.zip" --exclude ".git/*" --exclude "*.py" --exclude "*.yml" --exclude "*.yaml" --exclude "*.sh" --exclude ".terraform/*" --exclude "buildspec.yml"
+  post_build:
+    commands:
+      - echo Build completed on `date`
+      - echo Creating CloudFront invalidation...
+      - aws cloudfront create-invalidation --distribution-id E1N9FUZGW0SICT --paths "/*"
+
+artifacts:
+  files:
+    - '**/*'
+  name: jornageo-website

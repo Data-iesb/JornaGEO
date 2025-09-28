@@ -1,0 +1,22 @@
+# Terraform
+.terraform/
+.terraform.lock.hcl
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.tfplan
+
+# AWS
+lambda.zip
+
+# IDE
+.vscode/
+*.swp
+*.swo
+
+# Test folder
+test/
+
+# OS
+.DS_Store
+Thumbs.db
