@@ -1,7 +1,7 @@
 class ContentLoader {
     constructor() {
         this.content = null;
-        this.apiUrl = 'https://api.jornageo.dataiesb.com/register';
+        this.apiUrl = 'https://zohp111iq5.execute-api.us-east-1.amazonaws.com/prod/registration';
     }
 
     async loadContent() {

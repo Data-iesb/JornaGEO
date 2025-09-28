@@ -7,11 +7,8 @@ phases:
   pre_build:
     commands:
       - echo Build started on `date`
-      - pip install boto3
   build:
     commands:
-      - echo Creating DynamoDB tables...
-      - python create_tables.py
       - echo Syncing website files to S3...
       - aws s3 sync . s3://$S3_BUCKET --exclude "*.tf" --exclude "*.zip" --exclude ".git/*" --exclude "*.py" --exclude "*.yml" --exclude "*.yaml" --exclude "*.sh" --exclude ".terraform/*" --exclude "buildspec.yml" --exclude "infrastructure.yaml" --exclude "deploy.sh" --exclude "create_tables.py" --exclude "lambda_function.py"
   post_build:

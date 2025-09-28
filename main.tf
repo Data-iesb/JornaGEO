@@ -224,6 +224,115 @@ resource "aws_iam_role_policy" "codebuild_policy" {
   })
 }
 
+# Custom domain for API Gateway
+resource "aws_api_gateway_domain_name" "api" {
+  domain_name     = "api.jornageo.dataiesb.com"
+  certificate_arn = aws_acm_certificate_validation.cert.certificate_arn
+}
+
+resource "aws_api_gateway_base_path_mapping" "api" {
+  api_id      = aws_api_gateway_rest_api.jornageo_api.id
+  stage_name  = aws_api_gateway_deployment.jornageo_api.stage_name
+  domain_name = aws_api_gateway_domain_name.api.domain_name
+}
+
+resource "aws_route53_record" "api" {
+  zone_id = aws_route53_zone.main.zone_id
+  name    = "api.jornageo.dataiesb.com"
+  type    = "A"
+
+  alias {
+    name                   = aws_api_gateway_domain_name.api.cloudfront_domain_name
+    zone_id                = aws_api_gateway_domain_name.api.cloudfront_zone_id
+    evaluate_target_health = false
+  }
+}
+
+# API Gateway
+resource "aws_api_gateway_rest_api" "jornageo_api" {
+  name = "jornageo-api"
+}
+
+resource "aws_api_gateway_resource" "register" {
+  rest_api_id = aws_api_gateway_rest_api.jornageo_api.id
+  parent_id   = aws_api_gateway_rest_api.jornageo_api.root_resource_id
+  path_part   = "register"
+}
+
+resource "aws_api_gateway_method" "register_post" {
+  rest_api_id   = aws_api_gateway_rest_api.jornageo_api.id
+  resource_id   = aws_api_gateway_resource.register.id
+  http_method   = "POST"
+  authorization = "NONE"
+}
+
+resource "aws_api_gateway_method" "register_options" {
+  rest_api_id   = aws_api_gateway_rest_api.jornageo_api.id
+  resource_id   = aws_api_gateway_resource.register.id
+  http_method   = "OPTIONS"
+  authorization = "NONE"
+}
+
+resource "aws_api_gateway_integration" "register_post" {
+  rest_api_id = aws_api_gateway_rest_api.jornageo_api.id
+  resource_id = aws_api_gateway_resource.register.id
+  http_method = aws_api_gateway_method.register_post.http_method
+  integration_http_method = "POST"
+  type = "AWS_PROXY"
+  uri = aws_lambda_function.registration.invoke_arn
+}
+
+resource "aws_api_gateway_integration" "register_options" {
+  rest_api_id = aws_api_gateway_rest_api.jornageo_api.id
+  resource_id = aws_api_gateway_resource.register.id
+  http_method = aws_api_gateway_method.register_options.http_method
+  type = "MOCK"
+  request_templates = {
+    "application/json" = "{\"statusCode\": 200}"
+  }
+}
+
+resource "aws_api_gateway_method_response" "register_options" {
+  rest_api_id = aws_api_gateway_rest_api.jornageo_api.id
+  resource_id = aws_api_gateway_resource.register.id
+  http_method = aws_api_gateway_method.register_options.http_method
+  status_code = "200"
+  response_parameters = {
+    "method.response.header.Access-Control-Allow-Headers" = true
+    "method.response.header.Access-Control-Allow-Methods" = true
+    "method.response.header.Access-Control-Allow-Origin" = true
+  }
+}
+
+resource "aws_api_gateway_integration_response" "register_options" {
+  rest_api_id = aws_api_gateway_rest_api.jornageo_api.id
+  resource_id = aws_api_gateway_resource.register.id
+  http_method = aws_api_gateway_method.register_options.http_method
+  status_code = aws_api_gateway_method_response.register_options.status_code
+  response_parameters = {
+    "method.response.header.Access-Control-Allow-Headers" = "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'"
+    "method.response.header.Access-Control-Allow-Methods" = "'GET,POST,OPTIONS'"
+    "method.response.header.Access-Control-Allow-Origin" = "'*'"
+  }
+}
+
+resource "aws_api_gateway_deployment" "jornageo_api" {
+  depends_on = [
+    aws_api_gateway_integration.register_post,
+    aws_api_gateway_integration.register_options
+  ]
+  rest_api_id = aws_api_gateway_rest_api.jornageo_api.id
+  stage_name = "prod"
+}
+
+resource "aws_lambda_permission" "api_gateway" {
+  statement_id  = "AllowExecutionFromAPIGateway"
+  action        = "lambda:InvokeFunction"
+  function_name = aws_lambda_function.registration.function_name
+  principal     = "apigateway.amazonaws.com"
+  source_arn    = "${aws_api_gateway_rest_api.jornageo_api.execution_arn}/*/*"
+}
+
 # Lambda Function
 resource "aws_lambda_function" "registration" {
   filename         = "lambda.zip"
