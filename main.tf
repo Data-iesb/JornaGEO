@@ -224,30 +224,6 @@ resource "aws_iam_role_policy" "codebuild_policy" {
   })
 }
 
-# Custom domain for API Gateway
-resource "aws_api_gateway_domain_name" "api" {
-  domain_name     = "api.jornageo.dataiesb.com"
-  certificate_arn = aws_acm_certificate_validation.cert.certificate_arn
-}
-
-resource "aws_api_gateway_base_path_mapping" "api" {
-  api_id      = aws_api_gateway_rest_api.jornageo_api.id
-  stage_name  = aws_api_gateway_deployment.jornageo_api.stage_name
-  domain_name = aws_api_gateway_domain_name.api.domain_name
-}
-
-resource "aws_route53_record" "api" {
-  zone_id = aws_route53_zone.main.zone_id
-  name    = "api.jornageo.dataiesb.com"
-  type    = "A"
-
-  alias {
-    name                   = aws_api_gateway_domain_name.api.cloudfront_domain_name
-    zone_id                = aws_api_gateway_domain_name.api.cloudfront_zone_id
-    evaluate_target_health = false
-  }
-}
-
 # API Gateway
 resource "aws_api_gateway_rest_api" "jornageo_api" {
   name = "jornageo-api"

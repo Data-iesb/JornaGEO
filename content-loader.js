@@ -1,7 +1,7 @@
 class ContentLoader {
     constructor() {
         this.content = null;
-        this.apiUrl = 'https://zohp111iq5.execute-api.us-east-1.amazonaws.com/prod/registration';
+        this.apiUrl = 'https://a4ax2vyqte.execute-api.us-east-1.amazonaws.com/prod/register';
     }
 
     async loadContent() {
