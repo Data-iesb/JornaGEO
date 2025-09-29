@@ -154,18 +154,47 @@ resource "aws_codebuild_project" "jornageo" {
   service_role  = aws_iam_role.codebuild_role.arn
 
   artifacts {
-    type = "CODEPIPELINE"
+    type = "NO_ARTIFACTS"
   }
 
   environment {
     compute_type = "BUILD_GENERAL1_SMALL"
     image        = "aws/codebuild/amazonlinux2-x86_64-standard:3.0"
     type         = "LINUX_CONTAINER"
+    
+    environment_variable {
+      name  = "S3_BUCKET"
+      value = aws_s3_bucket.website.bucket
+    }
+    
+    environment_variable {
+      name  = "CLOUDFRONT_DISTRIBUTION_ID"
+      value = aws_cloudfront_distribution.website.id
+    }
   }
 
   source {
-    type = "CODEPIPELINE"
-    buildspec = "buildspec.yml"
+    type            = "GITHUB"
+    location        = "https://github.com/Data-iesb/jornageo.git"
+    git_clone_depth = 1
+    buildspec       = "buildspec.yml"
+  }
+}
+
+resource "aws_codebuild_webhook" "jornageo" {
+  project_name = aws_codebuild_project.jornageo.name
+  build_type   = "BUILD"
+  
+  filter_group {
+    filter {
+      type    = "EVENT"
+      pattern = "PUSH"
+    }
+    
+    filter {
+      type    = "HEAD_REF"
+      pattern = "^refs/heads/main$"
+    }
   }
 }
 
@@ -219,6 +248,15 @@ resource "aws_iam_role_policy" "codebuild_policy" {
           "cloudfront:CreateInvalidation"
         ]
         Resource = aws_cloudfront_distribution.website.arn
+      },
+      {
+        Effect = "Allow"
+        Action = [
+          "codebuild:CreateWebhook",
+          "codebuild:UpdateWebhook",
+          "codebuild:DeleteWebhook"
+        ]
+        Resource = "*"
       }
     ]
   })
