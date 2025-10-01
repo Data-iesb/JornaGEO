@@ -1,5 +1,10 @@
 version: 0.2
 
+env:
+  variables:
+    S3_BUCKET: "jornageo.dataiesb.com"
+    CLOUDFRONT_DISTRIBUTION_ID: "E1N9FUZGW0SICT"
+
 phases:
   install:
     runtime-versions:
