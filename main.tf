@@ -181,22 +181,7 @@ resource "aws_codebuild_project" "jornageo" {
   }
 }
 
-resource "aws_codebuild_webhook" "jornageo" {
-  project_name = aws_codebuild_project.jornageo.name
-  build_type   = "BUILD"
-  
-  filter_group {
-    filter {
-      type    = "EVENT"
-      pattern = "PUSH"
-    }
-    
-    filter {
-      type    = "HEAD_REF"
-      pattern = "^refs/heads/main$"
-    }
-  }
-}
+
 
 # CodeBuild IAM Role
 resource "aws_iam_role" "codebuild_role" {

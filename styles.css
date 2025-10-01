@@ -36,6 +36,11 @@ body {
     height: 70px;
 }
 
+.nav-logo .logo-img {
+    height: 40px;
+    width: auto;
+}
+
 .nav-logo h2 {
     color: #2c5aa0;
     font-size: 1.8rem;
