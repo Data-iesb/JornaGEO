@@ -88,25 +88,10 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    align-items: center;
-}
-
-.hero-image {
-    text-align: center;
-}
-
-.hero-cover {
-    max-width: 100%;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(220, 38, 38, 0.2);
 }
 
 .hero-content {
-    text-align: left;
+    text-align: center;
 }
 
 .hero-image-center {
