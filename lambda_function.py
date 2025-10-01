@@ -1,14 +1,25 @@
 import json
 import boto3
+from boto3.dynamodb.conditions import Key
 import uuid
 import os
 from datetime import datetime
 
 dynamodb = boto3.resource('dynamodb')
+sns = boto3.client('sns')
 table_name = os.environ.get('DYNAMODB_TABLE', 'jornageo-registrations')
 table = dynamodb.Table(table_name)
+sns_topic_arn = os.environ.get('SNS_TOPIC_ARN')
 
 def lambda_handler(event, context):
+    # Handle SNS messages
+    if 'Records' in event:
+        for record in event['Records']:
+            if record.get('EventSource') == 'aws:sns':
+                handle_sns_message(record)
+        return {'statusCode': 200}
+    
+    # Handle API Gateway requests
     headers = {
         'Access-Control-Allow-Origin': '*',
         'Access-Control-Allow-Headers': 'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token',
@@ -29,6 +40,10 @@ def lambda_handler(event, context):
         
     except Exception as e:
         return {'statusCode': 500, 'headers': headers, 'body': json.dumps({'error': 'Internal server error'})}
+
+def handle_sns_message(record):
+    message = json.loads(record['Sns']['Message'])
+    print(f"Received SNS message: {message}")
 
 def handle_registration(event, headers):
     try:
@@ -60,13 +75,21 @@ def handle_registration(event, headers):
         }
         
         try:
-            response = table.query(KeyConditionExpression=boto3.dynamodb.conditions.Key('email').eq(email))
+            response = table.query(KeyConditionExpression=Key('email').eq(email))
             if response['Items']:
                 return {'statusCode': 409, 'headers': headers, 'body': json.dumps({'error': 'Email already registered'})}
         except Exception:
             pass
         
         table.put_item(Item=registration_data)
+        
+        # Publish to SNS
+        if sns_topic_arn:
+            sns.publish(
+                TopicArn=sns_topic_arn,
+                Message=json.dumps(registration_data),
+                Subject='New JornaGEO Registration'
+            )
         
         return {
             'statusCode': 200,

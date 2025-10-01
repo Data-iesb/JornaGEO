@@ -152,7 +152,7 @@ class ContentLoader {
             const result = await response.json();
             
             if (response.ok) {
-                alert('Inscrição realizada com sucesso!');
+                alert('Inscrição realizada com sucesso! Verifique seu e-mail para confirmação.');
                 document.getElementById('registrationForm').reset();
             } else {
                 alert(result.error || 'Erro ao realizar inscrição');
