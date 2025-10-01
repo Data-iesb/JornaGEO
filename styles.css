@@ -1,3 +1,14 @@
+:root {
+    --primary-color: #dc2626;
+    --secondary-color: #ef4444;
+    --accent-color: #fca5a5;
+    --text-color: #1f2937;
+    --text-light: #6b7280;
+    --bg-color: #ffffff;
+    --bg-light: #fef2f2;
+    --border-color: #fecaca;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +18,8 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    color: #333;
+    color: var(--text-color);
+    background-color: var(--bg-color);
 }
 
 .container {
@@ -18,8 +30,8 @@ body {
 
 /* Navigation */
 .navbar {
-    background: #fff;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    background: var(--bg-color);
+    box-shadow: 0 2px 10px rgba(220, 38, 38, 0.1);
     position: fixed;
     top: 0;
     width: 100%;
@@ -42,7 +54,7 @@ body {
 }
 
 .nav-logo h2 {
-    color: #2c5aa0;
+    color: var(--primary-color);
     font-size: 1.8rem;
 }
 
@@ -54,21 +66,22 @@ body {
 
 .nav-menu a {
     text-decoration: none;
-    color: #333;
+    color: var(--text-color);
     font-weight: 500;
     transition: color 0.3s;
 }
 
 .nav-menu a:hover {
-    color: #2c5aa0;
+    color: var(--primary-color);
 }
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, #2c5aa0 0%, #1e3a8a 100%);
-    color: white;
+    background: linear-gradient(135deg, var(--bg-light) 0%, var(--bg-color) 100%);
+    color: var(--text-color);
     padding: 120px 0 80px;
     text-align: center;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .hero-container {
@@ -116,23 +129,23 @@ body {
 }
 
 .btn-primary {
-    background: #f59e0b;
+    background: var(--primary-color);
     color: white;
 }
 
 .btn-primary:hover {
-    background: #d97706;
+    background: var(--secondary-color);
 }
 
 .btn-secondary {
     background: transparent;
-    color: white;
-    border: 2px solid white;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
 }
 
 .btn-secondary:hover {
-    background: white;
-    color: #2c5aa0;
+    background: var(--primary-color);
+    color: white;
 }
 
 .hero-stats {
@@ -179,19 +192,20 @@ section {
 
 /* About Section */
 .about {
-    background: #f8fafc;
+    background: var(--bg-light);
+    padding: 80px 0;
 }
 
 .about-content h3 {
     font-size: 2rem;
-    color: #2c5aa0;
+    color: var(--primary-color);
     margin-bottom: 1rem;
     text-align: center;
 }
 
 .about-content p {
     font-size: 1.1rem;
-    color: #666;
+    color: var(--text-light);
     text-align: center;
     margin-bottom: 3rem;
 }
