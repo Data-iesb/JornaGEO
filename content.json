@@ -41,37 +41,32 @@
     "subtitle": "Dois dias intensivos de aprendizado e networking",
     "days": [
       {
-        "date": "15 de Março",
+        "date": "18 de Novembro",
         "day": "Dia 1",
         "sessions": [
           {
-            "time": "08:00 - 09:00",
+            "time": "18:30 - 19:00",
             "title": "Credenciamento e Coffee Break",
             "type": "break"
           },
           {
-            "time": "09:00 - 10:30",
+            "time": "19:00 - 19:40",
             "title": "Abertura: Tendências em Gestão Organizacional",
             "speaker": "Dr. <nome>",
             "type": "keynote"
           },
           {
-            "time": "10:30 - 12:00",
+            "time": "20:00 - 20:40",
             "title": "Workshop: Liderança Transformacional",
             "speaker": "Prof. <nome>",
             "type": "workshop"
           },
           {
-            "time": "14:00 - 15:30",
+            "time": "20:40 - 21:30",
             "title": "Gestão de Pessoas na Era Digital",
             "speaker": "<nome>",
             "type": "talk"
           },
-          {
-            "time": "15:30 - 17:00",
-            "title": "Mesa Redonda: Inovação Organizacional",
-            "type": "panel"
-          }
         ]
       },
       {
