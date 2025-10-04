@@ -74,27 +74,33 @@
         "day": "Dia 2",
         "sessions": [
           {
-            "time": "09:00 - 10:30",
-            "title": "Estratégias de Crescimento Sustentável",
-            "speaker": "<nome>",
+            "time": "17:00 - 18:30",
+            "title": "Laboratório prático de Ciência de Dados e Inteligência Artificial",
+            "speaker": "Prof. Sérgio da Costa Côrtes",
             "type": "keynote"
           },
           {
-            "time": "10:30 - 12:00",
-            "title": "Workshop: Gestão de Projetos Ágeis",
-            "speaker": "<nome>",
-            "type": "workshop"
+            "time": "18:30 - 19:00",
+            "title": "Credenciamento e Coffee Break",
+            "type": "break"
           },
           {
-            "time": "14:00 - 15:30",
-            "title": "Transformação Digital nas Organizações",
-            "speaker": "<nome>",
+            "time": "19:00 - 19:45",
+            "title": "Challenges with the Use of Artificial Intelligence (AI) in Public and Private Organizations",
+            "speaker": "Ms. Liz Moran (SAS Institute - USA)",
             "type": "talk"
           },
           {
-            "time": "15:30 - 16:30",
-            "title": "Encerramento e Networking",
-            "type": "networking"
+            "time": "20:00 - 20:40",
+            "title": "Workshop: Liderança Transformacional",
+            "speaker": "Prof. <nome>",
+            "type": "workshop"
+          },
+         {
+            "time": "20:40 - 21:30",
+            "title": "Gestão de Pessoas na Era Digital",
+            "speaker": "<nome>",
+            "type": "talk"
           }
         ]
       }
