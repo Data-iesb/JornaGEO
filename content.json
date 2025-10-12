@@ -52,7 +52,12 @@
           {
             "time": "19:00 - 19:40",
             "title": "Abertura: Estratégias Inovadoras e Transformação Digital",
-            "speaker": "Prof. Dr. Marcio Lopes Pimenta",
+            "speaker": "Prof. Dr. Márcio Lopes Pimenta",
+            "speakerInfo": {
+              "photo": "media/Marcio.jpg",
+              "lattes": "http://lattes.cnpq.br/3026927581342826",
+              "linkedin": ""
+            },
             "type": "keynote"
           },
           {
