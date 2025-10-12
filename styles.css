@@ -478,3 +478,57 @@ section {
         display: none;
     }
 }
+/* Coordinator Section - Discrete styling */
+.coordination {
+    padding: 2rem 0;
+    background-color: #f8f9fa;
+    border-top: 1px solid #e9ecef;
+}
+
+.coordination .section-header h2 {
+    font-size: 1.2rem;
+    color: #6c757d;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.coordinator-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.coordinator-photo img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.coordinator-info h3 {
+    font-size: 0.9rem;
+    color: #495057;
+    margin: 0 0 0.5rem 0;
+}
+
+.coordinator-links {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.coordinator-links .link-btn {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    background-color: #e9ecef;
+    color: #6c757d;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: background-color 0.2s;
+}
+
+.coordinator-links .link-btn:hover {
+    background-color: #dee2e6;
+}
