@@ -140,5 +140,14 @@
         ]}
       ]
     }
+  },
+  "coordination": {
+    "title": "Coordenação do JornaGEO 2025",
+    "coordinator": "Prof. Sérgio da Costa Côrtes",
+    "coordinatorInfo": {
+      "photo": "media/sergio.jpeg",
+      "lattes": "http://lattes.cnpq.br/1206696860799261",
+      "linkedin": "https://www.linkedin.com/in/s%C3%A9rgio-da-costa-c%C3%B4rtes-01032951/"
+    }
   }
 }

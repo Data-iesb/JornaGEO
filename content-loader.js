@@ -21,6 +21,7 @@ class ContentLoader {
         this.renderAbout();
         this.renderSchedule();
         this.renderRegistration();
+        this.renderCoordination();
     }
 
     renderHero() {
@@ -152,6 +153,17 @@ class ContentLoader {
             
             formFields.appendChild(formGroup);
         });
+    }
+
+    renderCoordination() {
+        const coordination = this.content.coordination;
+        
+        document.getElementById('coordination-title').textContent = coordination.title;
+        document.getElementById('coordinator-name').textContent = coordination.coordinator;
+        document.getElementById('coordinator-photo').src = coordination.coordinatorInfo.photo;
+        document.getElementById('coordinator-photo').alt = coordination.coordinator;
+        document.getElementById('coordinator-lattes').href = coordination.coordinatorInfo.lattes;
+        document.getElementById('coordinator-linkedin').href = coordination.coordinatorInfo.linkedin;
     }
 
     async submitRegistration(formData) {
