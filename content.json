@@ -1,8 +1,8 @@
 {
   "hero": {
     "tag": "JornaGEO 2025",
-    "title": "1ª Jornada de Gestão Estratégica de Organizações",
-    "description": "Evento de Gestão Estratégica de Organizações em Brasília. Conecte-se com líderes, gestores e profissionais da área.",
+    "title": "Desafios do Uso da Inteligência Artificial - 1ª Jornada de Gestão Estratégica de Organizações ",
+    "description": "Evento de Gestão Estratégica de Organizações em Brasília.<br> Conecte-se com líderes, gestores, acadêmicos e profissionais da área.<br> Vivencie a experiência de interagir com a IA aplicada a Gestão.",
     "primaryButton": "Inscreva-se Gratuitamente",
     "secondaryButton": "Ver Programação",
     "stats": {
@@ -14,9 +14,9 @@
   },
   "about": {
     "title": "Sobre o Evento",
-    "subtitle": "Transformando organizações através da gestão eficiente",
+    "subtitle": "Transformando organizações através da gestão orientada a evidências.<br>Presencial, IESB/SUL (SGAS, Quadra 613/614 - Asa Sul). <br> Aberto ao público - GRATUITO",
     "mainTitle": "Uma Jornada de Liderança",
-    "description": "A JornaGEO 2025 é o primeiro evento dedicado à Gestão de Organizações na região Centro-Oeste. Nossa missão é promover o intercâmbio de conhecimentos, experiências e inovações entre gestores, líderes e profissionais da área.",
+    "description": "A JornaGEO 2025 é focado na Gestão de Organizações na região Centro-Oeste. Nossa missão é promover o intercâmbio de conhecimentos, experiências e inovações entre gestores, líderes, acadêmicos e profissionais da área.",
     "features": [
       {
         "title": "🎯 Palestras Estratégicas",
@@ -28,7 +28,7 @@
       },
       {
         "title": "🤝 Networking Executivo",
-        "description": "Oportunidades de conexão com profissionais e empresários"
+        "description": "Oportunidades de conexão com profissionais, acadêmicos e empresários"
       },
       {
         "title": "📊 Cases de Sucesso",
@@ -51,19 +51,14 @@
           },
           {
             "time": "19:00 - 19:40",
-            "title": "Abertura: Tendências em Gestão Organizacional",
-            "speaker": "Dr. Sérgio da Costa Côrtes",
-            "speakerInfo": {
-              "photo": "media/sergio.jpeg",
-              "lattes": "http://lattes.cnpq.br/1206696860799261",
-              "linkedin": "https://www.linkedin.com/in/s%C3%A9rgio-da-costa-c%C3%B4rtes-01032951/"
-            },
+            "title": "Abertura: Estratégias Inovadoras e Transformação Digital",
+            "speaker": "Prof. Dr. Marcio Lopes Pimenta",
             "type": "keynote"
           },
           {
             "time": "20:00 - 20:40",
-            "title": "Workshop: Liderança Transformacional",
-            "speaker": "Prof. <nome>",
+            "title": "A importância da Gestão de Dados e Informações para geração de Conhecimentos na Economia Moderna",
+            "speaker": "Prof. Dr. Eduardo Pereira Nunes",
             "type": "workshop"
           },
           {
@@ -79,27 +74,38 @@
         "day": "Dia 2",
         "sessions": [
           {
-            "time": "09:00 - 10:30",
-            "title": "Estratégias de Crescimento Sustentável",
-            "speaker": "<nome>",
+            "time": "17:00 - 18:30",
+            "title": "Laboratório prático de Ciência de Dados e Inteligência Artificial",
+            "speaker": "Prof. Sérgio da Costa Côrtes",
+            "speakerInfo": {
+              "photo": "media/sergio.jpeg",
+              "lattes": "http://lattes.cnpq.br/1206696860799261",
+              "linkedin": "https://www.linkedin.com/in/s%C3%A9rgio-da-costa-c%C3%B4rtes-01032951/"
+            },
             "type": "keynote"
           },
           {
-            "time": "10:30 - 12:00",
-            "title": "Workshop: Gestão de Projetos Ágeis",
-            "speaker": "<nome>",
-            "type": "workshop"
+            "time": "18:30 - 19:00",
+            "title": "Credenciamento e Coffee Break",
+            "type": "break"
           },
           {
-            "time": "14:00 - 15:30",
-            "title": "Transformação Digital nas Organizações",
-            "speaker": "<nome>",
+            "time": "19:00 - 19:45",
+            "title": "Challenges with the Use of Artificial Intelligence (AI) in Public and Private Organizations",
+            "speaker": "Ms. Liz Moran (SAS Institute - USA)",
             "type": "talk"
           },
           {
-            "time": "15:30 - 16:30",
-            "title": "Encerramento e Networking",
-            "type": "networking"
+            "time": "20:00 - 20:40",
+            "title": "Workshop: Liderança Transformacional",
+            "speaker": "Prof. <nome>",
+            "type": "workshop"
+          },
+         {
+            "time": "20:40 - 21:30",
+            "title": "Gestão de Pessoas na Era Digital",
+            "speaker": "<nome>",
+            "type": "talk"
           }
         ]
       }

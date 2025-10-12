@@ -28,7 +28,7 @@ class ContentLoader {
         
         document.getElementById('hero-tag').textContent = hero.tag;
         document.getElementById('hero-title').textContent = hero.title;
-        document.getElementById('hero-description').textContent = hero.description;
+        document.getElementById('hero-description').innerHTML = hero.description;
         document.getElementById('hero-primary-btn').textContent = hero.primaryButton;
         document.getElementById('hero-secondary-btn').textContent = hero.secondaryButton;
         document.getElementById('participants-count').textContent = hero.stats.participants;
