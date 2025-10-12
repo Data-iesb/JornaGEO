@@ -152,12 +152,37 @@
     }
   },
   "coordination": {
-    "title": "Coordenação do JornaGEO 2025",
-    "coordinator": "Prof. Sérgio da Costa Côrtes",
-    "coordinatorInfo": {
-      "photo": "media/sergio.jpeg",
-      "lattes": "http://lattes.cnpq.br/1206696860799261",
-      "linkedin": "https://www.linkedin.com/in/s%C3%A9rgio-da-costa-c%C3%B4rtes-01032951/"
-    }
+    "title": "Coordenação",
+    "coordinators": [
+      {
+        "section": "Coordenação do JornaGEO 2025",
+        "name": "Prof. Sérgio da Costa Côrtes",
+        "photo": "media/sergio.jpeg",
+        "lattes": "http://lattes.cnpq.br/1206696860799261",
+        "linkedin": "https://www.linkedin.com/in/s%C3%A9rgio-da-costa-c%C3%B4rtes-01032951/"
+      },
+      {
+        "section": "Coordenação do JornaGEO 2025",
+        "name": "Professora Simone de Araújo Góes Assis",
+        "photo": "media/Simone.png",
+        "lattes": "http://lattes.cnpq.br/1014598931590283",
+        "linkedin": ""
+      },
+      {
+        "section": "Coordenação do JornaGEO 2025",
+        "name": "Professora Helga Cristina Hedler",
+        "photo": "media/Helga.png",
+        "lattes": "http://lattes.cnpq.br/9878306773047270",
+        "linkedin": "https://www.linkedin.com/in/helga-cristina-hedler-03bbb094/"
+      },
+      {
+        "section": "Coordenação do Mestrado em Gestão Estratégica de Organizações do IESB",
+        "name": "Professor André Rehbein Sathler Guimarães",
+        "photo": "media/Andre.png",
+        "lattes": "http://lattes.cnpq.br/9394532830433721",
+        "linkedin": "https://www.linkedin.com/in/andresathler/",
+        "phone": "(61) 99269-4999"
+      }
+    ]
   }
 }

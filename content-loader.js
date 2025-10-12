@@ -160,11 +160,46 @@ class ContentLoader {
         if (!coordination) return;
         
         document.getElementById('coordination-title').innerHTML = coordination.title;
-        document.getElementById('coordinator-name').innerHTML = coordination.coordinator;
-        document.getElementById('coordinator-photo').src = coordination.coordinatorInfo.photo;
-        document.getElementById('coordinator-photo').alt = coordination.coordinator;
-        document.getElementById('coordinator-lattes').href = coordination.coordinatorInfo.lattes;
-        document.getElementById('coordinator-linkedin').href = coordination.coordinatorInfo.linkedin;
+        
+        const coordinationContent = document.getElementById('coordination-content');
+        coordinationContent.innerHTML = '';
+        
+        let currentSection = '';
+        
+        coordination.coordinators.forEach(coordinator => {
+            if (coordinator.section !== currentSection) {
+                currentSection = coordinator.section;
+                const sectionHeader = document.createElement('div');
+                sectionHeader.className = 'coordination-section';
+                sectionHeader.innerHTML = `<h3>${coordinator.section}</h3>`;
+                coordinationContent.appendChild(sectionHeader);
+            }
+            
+            const coordinatorCard = document.createElement('div');
+            coordinatorCard.className = 'coordinator-card';
+            
+            const linkedinLink = coordinator.linkedin ? 
+                `<a href="${coordinator.linkedin}" target="_blank" class="link-btn">LinkedIn</a>` : '';
+            
+            const phoneInfo = coordinator.phone ? 
+                `<div class="coordinator-phone">Telefone: ${coordinator.phone}</div>` : '';
+            
+            coordinatorCard.innerHTML = `
+                <div class="coordinator-photo">
+                    <img src="${coordinator.photo}" alt="${coordinator.name}">
+                </div>
+                <div class="coordinator-info">
+                    <h4>${coordinator.name}</h4>
+                    <div class="coordinator-links">
+                        <a href="${coordinator.lattes}" target="_blank" class="link-btn">Lattes</a>
+                        ${linkedinLink}
+                    </div>
+                    ${phoneInfo}
+                </div>
+            `;
+            
+            coordinationContent.appendChild(coordinatorCard);
+        });
     }
 
     async submitRegistration(formData) {
