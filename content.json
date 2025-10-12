@@ -14,7 +14,7 @@
   },
   "about": {
     "title": "Sobre o Evento",
-    "subtitle": "Transformando organizações através da gestão orientada a evidências.<br>Presencial, IESB/SUL (SGAS, Quadra 613/614 - Asa Sul). <br> Aberto ao público - GRATUITO",
+    "subtitle": "Transformando organizações através da gestão orientada a evidências.<br> Presencial, IESB/SUL (SGAS, Quadra 613/614 - Asa Sul).<br> Aberto ao público - GRATUITO",
     "mainTitle": "Uma Jornada de Liderança",
     "description": "A JornaGEO 2025 é focado na Gestão de Organizações na região Centro-Oeste. Nossa missão é promover o intercâmbio de conhecimentos, experiências e inovações entre gestores, líderes, acadêmicos e profissionais da área.",
     "features": [
@@ -24,7 +24,7 @@
       },
       {
         "title": "🔧 Workshops Práticos",
-        "description": "Sessões hands-on para desenvolvimento de competências gerenciais."
+        "description": "Sessões hands-on para desenvolvimento de competências em Ciência de Dados e Inteligência Artificial."
       },
       {
         "title": "🤝 Networking Executivo",
@@ -52,13 +52,23 @@
           {
             "time": "19:00 - 19:40",
             "title": "Abertura: Estratégias Inovadoras e Transformação Digital",
-            "speaker": "Prof. Dr. Marcio Lopes Pimenta",
+            "speaker": "Prof. Dr. Márcio Lopes Pimenta",
+            "speakerInfo": {
+              "photo": "media/Marcio.jpg",
+              "lattes": "http://lattes.cnpq.br/3026927581342826",
+              "linkedin": ""
+            },
             "type": "keynote"
           },
           {
             "time": "20:00 - 20:40",
             "title": "A importância da Gestão de Dados e Informações para geração de Conhecimentos na Economia Moderna",
             "speaker": "Prof. Dr. Eduardo Pereira Nunes",
+            "speakerInfo": {
+              "photo": "media/eduardo.png",
+              "lattes": "http://lattes.cnpq.br/4403156993221838",
+              "linkedin": "https://www.linkedin.com/in/eduardo-pereira-nunes-32a59534/"
+            },
             "type": "workshop"
           },
           {
