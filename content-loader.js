@@ -157,6 +157,7 @@ class ContentLoader {
 
     renderCoordination() {
         const coordination = this.content.coordination;
+        if (!coordination) return;
         
         document.getElementById('coordination-title').textContent = coordination.title;
         document.getElementById('coordinator-name').textContent = coordination.coordinator;
