@@ -76,7 +76,22 @@ class ContentLoader {
                 <div class="session">
                     <div class="session-time">${session.time}</div>
                     <div class="session-title">${session.title}</div>
-                    ${session.speaker ? `<div class="session-speaker">${session.speaker}</div>` : ''}
+                    ${session.speaker ? `
+                        <div class="session-speaker">
+                            ${session.speakerInfo ? `
+                                <div class="speaker-info">
+                                    <img src="${session.speakerInfo.photo}" alt="${session.speaker}" class="speaker-photo">
+                                    <div class="speaker-details">
+                                        <div class="speaker-name">${session.speaker}</div>
+                                        <div class="speaker-links">
+                                            <a href="${session.speakerInfo.lattes}" target="_blank">Currículo Lattes</a>
+                                            <a href="${session.speakerInfo.linkedin}" target="_blank">LinkedIn</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            ` : session.speaker}
+                        </div>
+                    ` : ''}
                 </div>
             `).join('');
 

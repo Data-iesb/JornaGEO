@@ -306,6 +306,48 @@ section {
     font-size: 0.9rem;
 }
 
+.speaker-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.speaker-photo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--primary-color);
+}
+
+.speaker-details {
+    flex: 1;
+}
+
+.speaker-name {
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 0.25rem;
+}
+
+.speaker-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.speaker-links a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 0.8rem;
+    transition: color 0.3s ease;
+}
+
+.speaker-links a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
 /* Registration Section */
 .registration {
     background: var(--bg-light);

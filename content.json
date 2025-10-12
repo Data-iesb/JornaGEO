@@ -52,7 +52,12 @@
           {
             "time": "19:00 - 19:40",
             "title": "Abertura: Tendências em Gestão Organizacional",
-            "speaker": "Dr. <nome>",
+            "speaker": "Dr. Sérgio da Costa Côrtes",
+            "speakerInfo": {
+              "photo": "media/sergio.jpeg",
+              "lattes": "http://lattes.cnpq.br/1206696860799261",
+              "linkedin": "https://www.linkedin.com/in/s%C3%A9rgio-da-costa-c%C3%B4rtes-01032951/"
+            },
             "type": "keynote"
           },
           {
