@@ -27,24 +27,24 @@ class ContentLoader {
     renderHero() {
         const hero = this.content.hero;
         
-        document.getElementById('hero-tag').textContent = hero.tag;
-        document.getElementById('hero-title').textContent = hero.title;
+        document.getElementById('hero-tag').innerHTML = hero.tag;
+        document.getElementById('hero-title').innerHTML = hero.title;
         document.getElementById('hero-description').innerHTML = hero.description;
-        document.getElementById('hero-primary-btn').textContent = hero.primaryButton;
-        document.getElementById('hero-secondary-btn').textContent = hero.secondaryButton;
-        document.getElementById('participants-count').textContent = hero.stats.participants;
-        document.getElementById('participants-label').textContent = hero.stats.participantsLabel;
-        document.getElementById('days-count').textContent = hero.stats.days;
-        document.getElementById('days-label').textContent = hero.stats.daysLabel;
+        document.getElementById('hero-primary-btn').innerHTML = hero.primaryButton;
+        document.getElementById('hero-secondary-btn').innerHTML = hero.secondaryButton;
+        document.getElementById('participants-count').innerHTML = hero.stats.participants;
+        document.getElementById('participants-label').innerHTML = hero.stats.participantsLabel;
+        document.getElementById('days-count').innerHTML = hero.stats.days;
+        document.getElementById('days-label').innerHTML = hero.stats.daysLabel;
     }
 
     renderAbout() {
         const about = this.content.about;
         
-        document.getElementById('about-title').textContent = about.title;
-        document.getElementById('about-subtitle').textContent = about.subtitle;
-        document.getElementById('about-main-title').textContent = about.mainTitle;
-        document.getElementById('about-description').textContent = about.description;
+        document.getElementById('about-title').innerHTML = about.title;
+        document.getElementById('about-subtitle').innerHTML = about.subtitle;
+        document.getElementById('about-main-title').innerHTML = about.mainTitle;
+        document.getElementById('about-description').innerHTML = about.description;
 
         const featuresGrid = document.getElementById('features-grid');
         featuresGrid.innerHTML = '';
@@ -63,8 +63,8 @@ class ContentLoader {
     renderSchedule() {
         const schedule = this.content.schedule;
         
-        document.getElementById('schedule-title').textContent = schedule.title;
-        document.getElementById('schedule-subtitle').textContent = schedule.subtitle;
+        document.getElementById('schedule-title').innerHTML = schedule.title;
+        document.getElementById('schedule-subtitle').innerHTML = schedule.subtitle;
 
         const scheduleContent = document.getElementById('schedule-content');
         scheduleContent.innerHTML = '';
@@ -113,15 +113,15 @@ class ContentLoader {
     renderRegistration() {
         const registration = this.content.registration;
         
-        document.getElementById('registration-title').textContent = registration.title;
-        document.getElementById('registration-subtitle').textContent = registration.subtitle;
-        document.getElementById('registration-price').textContent = registration.price;
+        document.getElementById('registration-title').innerHTML = registration.title;
+        document.getElementById('registration-subtitle').innerHTML = registration.subtitle;
+        document.getElementById('registration-price').innerHTML = registration.price;
 
         const includesList = document.getElementById('registration-includes');
         includesList.innerHTML = '';
         registration.includes.forEach(item => {
             const li = document.createElement('li');
-            li.textContent = item;
+            li.innerHTML = item;
             includesList.appendChild(li);
         });
 
@@ -159,8 +159,8 @@ class ContentLoader {
         const coordination = this.content.coordination;
         if (!coordination) return;
         
-        document.getElementById('coordination-title').textContent = coordination.title;
-        document.getElementById('coordinator-name').textContent = coordination.coordinator;
+        document.getElementById('coordination-title').innerHTML = coordination.title;
+        document.getElementById('coordinator-name').innerHTML = coordination.coordinator;
         document.getElementById('coordinator-photo').src = coordination.coordinatorInfo.photo;
         document.getElementById('coordinator-photo').alt = coordination.coordinator;
         document.getElementById('coordinator-lattes').href = coordination.coordinatorInfo.lattes;
