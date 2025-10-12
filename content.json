@@ -140,14 +140,49 @@
         {"name": "position", "label": "Cargo/Função", "type": "text", "required": false},
         {"name": "phone", "label": "Telefone", "type": "tel", "required": false},
         {"name": "management_area", "label": "Área de Gestão", "type": "select", "required": false, "options": [
-          "Gestão Geral",
-          "Recursos Humanos",
-          "Gestão Financeira",
+          "Administração de Empresas",
+          "Branding e Experiência do Cliente",
+          "Cadeias de Suprimentos",
+          "Ciência de Dados e Inteligência Artificial",
+          "Comunicação Empresarial",
+          "Contabilidade Gerencial",
+          "Controladoria e Auditoria",
+          "Cultura e Clima Organizacional",
+          "Desenvolvimento Sustentável",
+          "Empreendedorismo e Inovação",
+          "Ensino de Administração",
+          "ESG e Sustentabilidade Corporativa",
+          "Ética e Responsabilidade Social",
+          "Finanças Corporativas",
+          "Formação Docente",
+          "Governança Ambiental",
+          "Gestão da Inovação e Startups",
+          "Gestão da Produção e Operações",
+          "Gestão de Organizações Sociais",
+          "Gestão de Pessoas/RH",
           "Gestão de Projetos",
-          "Gestão de Operações",
           "Gestão Estratégica",
-          "Outro"
-        ]}
+          "Gestão Pública",
+          "Indústria 4.0/Transformação Digital",
+          "Liderança e Desenvolvimento Organizacional",
+          "Logística",
+          "Marketing Estratégico",
+          "Métodos Quantitativos e Qualitativos",
+          "Mídias Digitais",
+          "Orçamento Público",
+          "Pesquisa Acadêmica em Gestão",
+          "Planejamento e Avaliação de Programas",
+          "Planejamento e Governança",
+          "Políticas Públicas",
+          "Psicologia Organizacional",
+          "Qualidade e Processos",
+          "Responsabilidade Social",
+          "Sistemas de Informação Gerencial",
+          "Sustentabilidade",
+          "Transparência e Controle Social",
+          "Outra"
+        ]},
+        {"name": "ai_session", "label": "Quero participar da \"Sessões hands-on\" de IA no dia 19 de Novembro às 17h", "type": "checkbox", "required": false}
       ]
     }
   },
@@ -180,7 +215,9 @@
         "name": "Professor André Rehbein Sathler Guimarães",
         "photo": "media/Andre.png",
         "lattes": "http://lattes.cnpq.br/9394532830433721",
-        "linkedin": "https://www.linkedin.com/in/andresathler/"
+        "linkedin": "https://www.linkedin.com/in/andresathler/",
+        "phone": "(61) 99269-4999",
+        "website": "https://conteudos.iesb.br/mestradoprofissional"
       }
     ]
   }

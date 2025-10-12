@@ -144,6 +144,13 @@ class ContentLoader {
                         ${options}
                     </select>
                 `;
+            } else if (field.type === 'checkbox') {
+                formGroup.innerHTML = `
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="${field.name}" name="${field.name}" value="sim">
+                        <label for="${field.name}">${field.label}</label>
+                    </div>
+                `;
             } else {
                 formGroup.innerHTML = `
                     <label for="${field.name}">${field.label}${field.required ? ' *' : ''}</label>
@@ -186,6 +193,9 @@ class ContentLoader {
             const linkedinLink = coordinator.linkedin ? 
                 `<a href="${coordinator.linkedin}" target="_blank" class="link-btn">LinkedIn</a>` : '';
             
+            const websiteLink = coordinator.website ? 
+                `<a href="${coordinator.website}" target="_blank" class="link-btn">Website</a>` : '';
+            
             const phoneInfo = coordinator.phone ? 
                 `<div class="coordinator-phone">Telefone: ${coordinator.phone}</div>` : '';
             
@@ -198,6 +208,7 @@ class ContentLoader {
                     <div class="coordinator-links">
                         <a href="${coordinator.lattes}" target="_blank" class="link-btn">Lattes</a>
                         ${linkedinLink}
+                        ${websiteLink}
                     </div>
                     ${phoneInfo}
                 </div>
