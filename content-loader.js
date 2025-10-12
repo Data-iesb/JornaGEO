@@ -165,6 +165,7 @@ class ContentLoader {
         coordinationContent.innerHTML = '';
         
         let currentSection = '';
+        let currentGrid = null;
         
         coordination.coordinators.forEach(coordinator => {
             if (coordinator.section !== currentSection) {
@@ -173,6 +174,10 @@ class ContentLoader {
                 sectionHeader.className = 'coordination-section';
                 sectionHeader.innerHTML = `<h3>${coordinator.section}</h3>`;
                 coordinationContent.appendChild(sectionHeader);
+                
+                currentGrid = document.createElement('div');
+                currentGrid.className = 'coordination-grid';
+                coordinationContent.appendChild(currentGrid);
             }
             
             const coordinatorCard = document.createElement('div');
@@ -198,7 +203,7 @@ class ContentLoader {
                 </div>
             `;
             
-            coordinationContent.appendChild(coordinatorCard);
+            currentGrid.appendChild(coordinatorCard);
         });
     }
 
