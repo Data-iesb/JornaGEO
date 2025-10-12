@@ -64,6 +64,11 @@
             "time": "20:00 - 20:40",
             "title": "A importância da Gestão de Dados e Informações para geração de Conhecimentos na Economia Moderna",
             "speaker": "Prof. Dr. Eduardo Pereira Nunes",
+            "speakerInfo": {
+              "photo": "media/eduardo.png",
+              "lattes": "http://lattes.cnpq.br/4403156993221838",
+              "linkedin": "https://www.linkedin.com/in/eduardo-pereira-nunes-32a59534/"
+            },
             "type": "workshop"
           },
           {
