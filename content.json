@@ -102,7 +102,12 @@
           {
             "time": "19:00 - 19:45",
             "title": "Challenges with the Use of Artificial Intelligence (AI) in Public and Private Organizations",
-            "speaker": "Ms. Liz Moran (SAS Institute - USA)",
+            "speaker": "Ms. Liz Moran (Senior Manager of Academic Innovation and Strategy at SAS Institute - USA)",
+            "speakerInfo": {
+              "photo": "media/Liz.png",
+              "lattes": "",
+              "linkedin": "https://www.linkedin.com/in/moranliz/"
+            },
             "type": "talk"
           },
           {
