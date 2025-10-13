@@ -187,7 +187,7 @@
           "Transparência e Controle Social",
           "Outra"
         ]},
-        {"name": "ai_session", "label": "Quero participar da \"Sessões hands-on\" de IA no dia 19 de Novembro às 17h", "type": "checkbox", "required": false}
+        {"name": "ai_session", "label": "Quero participar da \"Sessão hands-on\" de Ciências de Dados e IA no dia 19 de Novembro às 17h", "type": "checkbox", "required": false}
       ]
     }
   },
@@ -221,7 +221,7 @@
         "photo": "media/Andre.png",
         "lattes": "http://lattes.cnpq.br/9394532830433721",
         "linkedin": "https://www.linkedin.com/in/andresathler/",
-        "phone": "(61) 99269-4999",
+        "phone": "(61) 99269-4999    (https://conteudos.iesb.br/mestradoprofissional)",
         "website": "https://conteudos.iesb.br/mestradoprofissional"
       }
     ]
