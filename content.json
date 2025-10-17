@@ -113,7 +113,12 @@
           {
             "time": "20:00 - 20:40",
             "title": "Tranformação Digital e os Impactos da IA nas Organizações",
-            "speaker": "Prof. <nome>",
+            "speaker": "Leandro Namora Magdalena",
+            "speakerInfo": {
+              "photo": "media/Leandro.png",
+              "lattes": "",
+              "linkedin": "https://www.linkedin.com/in/lnmagdalena/"
+            },
             "type": "workshop"
           },
          {
