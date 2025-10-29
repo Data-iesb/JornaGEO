@@ -635,8 +635,12 @@ section {
 
 .partner-logo img {
     max-width: 100%;
-    max-height: 80px;
+    max-height: 120px;
     object-fit: contain;
+}
+
+.partner-logo img[src*="sas.png"] {
+    max-height: 60px;
 }
 
 .partner-description {
