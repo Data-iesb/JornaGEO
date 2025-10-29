@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quem Somos - JornaGEO 2025</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h2>JornaGEO 2025</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="index.html#about">Sobre</a></li>
+                <li><a href="index.html#schedule">Programação</a></li>
+                <li><a href="index.html#registration">Inscrição</a></li>
+                <li><a href="quem-somos.html" class="active">Quem Somos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Quem Somos</h1>
+                <p>Conheça a equipe por trás da JornaGEO 2025</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nossa Missão</h2>
+                <p>Promover o intercâmbio de conhecimentos, experiências e inovações entre gestores, líderes, acadêmicos e profissionais da área de gestão organizacional.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="coordination" class="coordination">
+        <div class="container">
+            <div class="section-header">
+                <h2 id="coordination-title">Loading...</h2>
+            </div>
+            <div id="coordination-content">
+                <!-- Content will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 JornaGEO. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="content-loader.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const contentLoader = new ContentLoader();
+            contentLoader.loadContent().then(() => {
+                contentLoader.renderCoordination();
+            });
+        });
+    </script>
+</body>
+</html>

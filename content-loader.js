@@ -6,7 +6,12 @@ class ContentLoader {
 
     async loadContent() {
         try {
-            const response = await fetch('./content.json');
+            const response = await fetch(`./content.json?v=${Date.now()}`, {
+                cache: 'no-cache',
+                headers: {
+                    'Cache-Control': 'no-cache'
+                }
+            });
             this.content = await response.json();
             this.renderContent();
         } catch (error) {
