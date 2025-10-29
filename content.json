@@ -73,7 +73,7 @@
           },
           {
             "time": "20:40 - 21:30",
-            "title": "Gestão de Pessoas na Era Digital em Organizações Modernas",
+            "title": "Desafios com o uso da Inteligência Artificial (IA) na formação de Recursos Humanos nas Organizações Públicas",
             "speaker": "<nome>",
             "type": "talk"
           }
@@ -112,8 +112,13 @@
           },
           {
             "time": "20:00 - 20:40",
-            "title": "Tranformação Digital e os Impactos da IA nas Organizações",
-            "speaker": "Prof. <nome>",
+            "title": "Transformação Digital e os Impactos da Inteligência Artificial nas Organizações",
+            "speaker": "Leandro Namora Magdalena",
+            "speakerInfo": {
+              "photo": "media/Leandro.png",
+              "lattes": "http://lattes.cnpq.br/5847954927282514",
+              "linkedin": "https://www.linkedin.com/in/lnmagdalena/"
+            },
             "type": "workshop"
           },
          {
@@ -187,7 +192,7 @@
           "Transparência e Controle Social",
           "Outra"
         ]},
-        {"name": "ai_session", "label": "Quero participar da \"Sessões hands-on\" de IA no dia 19 de Novembro às 17h", "type": "checkbox", "required": false}
+        {"name": "ai_session", "label": "Quero participar da \"Sessão hands-on\" de Ciências de Dados e IA no dia 19 de Novembro às 17h", "type": "checkbox", "required": false}
       ]
     }
   },
@@ -221,7 +226,8 @@
         "photo": "media/Andre.png",
         "lattes": "http://lattes.cnpq.br/9394532830433721",
         "linkedin": "https://www.linkedin.com/in/andresathler/",
-        "phone": "(61) 99269-4999",
+        "website": "https://conteudos.iesb.br/mestradoprofissional",
+        "phone": "(61) 99269-4999    (https://conteudos.iesb.br/mestradoprofissional)",
         "website": "https://conteudos.iesb.br/mestradoprofissional"
       }
     ]
