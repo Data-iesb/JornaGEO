@@ -77,8 +77,13 @@
             "speaker": "Professora Helga Cristina Hedler e Professora Beatriz Amália Albarello",
              "speakerInfo": {
               "photo": "media/Helga.png",
-               "lattes": "http://lattes.cnpq.br/9878306773047270, http://lattes.cnpq.br/9267084024389682",
-                "linkedin": "https://www.linkedin.com/in/helga-cristina-hedler-03bbb094/, https://www.linkedin.com/in/beatriz-am%C3%A1lia-a-25b08224"
+               "lattes": "http://lattes.cnpq.br/9878306773047270",
+                "linkedin": "https://www.linkedin.com/in/helga-cristina-hedler-03bbb094/"
+            },
+             "speakerInfo": {
+              "photo": "media/Beatriz.png",
+               "lattes": "http://lattes.cnpq.br/9267084024389682",
+                "linkedin": "https://www.linkedin.com/in/beatriz-am%C3%A1lia-a-25b08224"
             },
             "type": "talk"
           }
