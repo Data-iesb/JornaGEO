@@ -73,8 +73,13 @@
           },
           {
             "time": "20:40 - 21:30",
-            "title": "Desafios com o uso da Inteligência Artificial (IA) na formação de Recursos Humanos nas Organizações Públicas",
-            "speaker": "<nome>",
+            "title": "Desafios com o uso da Inteligência Artificial (IA) na formação de Recursos Humanos nas Organizações",
+            "speaker": "Professora Helga Cristina Hedler e Professora Beatriz Amália Albarello",
+             "speakerInfo": {
+              "photo": "media/Helga.png",
+               "lattes": "http://lattes.cnpq.br/9878306773047270",
+                "linkedin": "https://www.linkedin.com/in/helga-cristina-hedler-03bbb094/"
+            },
             "type": "talk"
           }
         ]
