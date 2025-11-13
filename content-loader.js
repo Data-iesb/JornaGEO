@@ -84,7 +84,20 @@ class ContentLoader {
                     <div class="session-title">${session.title}</div>
                     ${session.speaker ? `
                         <div class="session-speaker">
-                            ${session.speakerInfo ? `
+                            ${session.speakers ? `
+                                ${session.speakers.map(speaker => `
+                                    <div class="speaker-info">
+                                        <img src="${speaker.photo}" alt="${speaker.name}" class="speaker-photo">
+                                        <div class="speaker-details">
+                                            <div class="speaker-name">${speaker.name}</div>
+                                            <div class="speaker-links">
+                                                ${speaker.lattes ? `<a href="${speaker.lattes}" target="_blank">Currículo Lattes</a>` : ''}
+                                                ${speaker.linkedin ? `<a href="${speaker.linkedin}" target="_blank">LinkedIn</a>` : ''}
+                                            </div>
+                                        </div>
+                                    </div>
+                                `).join('')}
+                            ` : session.speakerInfo ? `
                                 <div class="speaker-info">
                                     <img src="${session.speakerInfo.photo}" alt="${session.speaker}" class="speaker-photo">
                                     <div class="speaker-details">
