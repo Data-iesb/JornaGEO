@@ -1,0 +1,50 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: Ghost CMS webhook sync for JornaGEO
+
+Parameters:
+  GhostApiKey:
+    Type: String
+    NoEcho: true
+
+Globals:
+  Function:
+    Timeout: 60
+    Runtime: python3.12
+
+Resources:
+  SyncFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: jornageo-ghost-sync
+      CodeUri: src/
+      Handler: app.lambda_handler
+      Environment:
+        Variables:
+          GHOST_API_KEY: !Ref GhostApiKey
+          S3_BUCKET: jornageo.dataiesb.com
+          CF_DISTRIBUTION: E1N9FUZGW0SICT
+      Policies:
+        - S3CrudPolicy:
+            BucketName: jornageo.dataiesb.com
+        - Statement:
+            - Effect: Allow
+              Action:
+                - cloudfront:CreateInvalidation
+              Resource: "*"
+      Events:
+        Webhook:
+          Type: HttpApi
+          Properties:
+            Path: /jornageo/sync
+            Method: POST
+            ApiId: !Ref SyncApi
+
+  SyncApi:
+    Type: AWS::Serverless::HttpApi
+    Properties:
+      StageName: prod
+
+Outputs:
+  WebhookUrl:
+    Value: !Sub "https://${SyncApi}.execute-api.${AWS::Region}.amazonaws.com/prod/jornageo/sync"

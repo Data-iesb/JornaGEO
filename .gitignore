@@ -20,3 +20,5 @@ test/
 # OS
 .DS_Store
 Thumbs.db
+.aws-sam/
+.env
