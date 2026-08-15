@@ -5,32 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JornaGEO 2026 - Jornada de Gestão de Organizações</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        .coming-soon {
-            min-height: 60vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 4rem 1rem;
-        }
-        .coming-soon h1 {
-            font-size: 3rem;
-            color: #1a1a2e;
-            margin-bottom: 1rem;
-        }
-        .coming-soon p {
-            font-size: 1.3rem;
-            color: #555;
-            max-width: 600px;
-            margin-bottom: 2rem;
-        }
-        .coming-soon .subtitle {
-            font-size: 1rem;
-            color: #888;
-        }
-    </style>
 </head>
 <body>
     <nav class="navbar">
@@ -39,16 +13,111 @@
                 <img src="media/logo.jpeg" alt="JornaGEO" class="logo-img">
             </div>
             <ul class="nav-menu">
-                <li><a href="index.html" class="active">Início</a></li>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#schedule">Programação</a></li>
+                <li><a href="#registration">Inscrição</a></li>
+                <li><a href="#coordination">Coordenação</a></li>
                 <li><a href="eventos-anteriores.html">Eventos Anteriores</a></li>
             </ul>
         </div>
     </nav>
 
-    <section class="coming-soon">
-        <h1>JornaGEO 2026</h1>
-        <p>Em breve, mais informações sobre a próxima edição da Jornada de Gestão Estratégica de Organizações.</p>
-        <p class="subtitle">Fique atento — novidades em breve!</p>
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <span class="hero-tag" id="hero-tag">Loading...</span>
+                <div class="hero-image-center">
+                    <img src="media/capa.jpeg" alt="JornaGEO 2026" class="hero-cover-center">
+                </div>
+                <h1 class="hero-title" id="hero-title">Loading...</h1>
+                <p class="hero-description" id="hero-description">Loading...</p>
+                <div class="hero-buttons">
+                    <button class="btn-primary" id="hero-primary-btn">Loading...</button>
+                    <button class="btn-secondary" id="hero-secondary-btn">Loading...</button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number" id="participants-count">Loading...</span>
+                        <span class="stat-label" id="participants-label">Loading...</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" id="days-count">Loading...</span>
+                        <span class="stat-label" id="days-label">Loading...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 id="about-title">Loading...</h2>
+                <p id="about-subtitle">Loading...</p>
+            </div>
+            <div class="about-content">
+                <h3 id="about-main-title">Loading...</h3>
+                <p id="about-description">Loading...</p>
+                <div class="features-grid" id="features-grid">
+                    <!-- Features will be loaded dynamically -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="schedule" class="schedule">
+        <div class="container">
+            <div class="section-header">
+                <h2 id="schedule-title">Loading...</h2>
+                <p id="schedule-subtitle">Loading...</p>
+            </div>
+            <div class="schedule-content" id="schedule-content">
+                <!-- Schedule will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <section id="registration" class="registration">
+        <div class="container">
+            <div class="section-header">
+                <h2 id="registration-title">Loading...</h2>
+                <p id="registration-subtitle">Loading...</p>
+            </div>
+            <div class="registration-content">
+                <div class="registration-info">
+                    <div class="price">
+                        <span class="price-label">Investimento:</span>
+                        <span class="price-value" id="registration-price">Loading...</span>
+                    </div>
+                    <div class="includes">
+                        <h4>O que está incluído:</h4>
+                        <ul id="registration-includes">
+                            <!-- Includes will be loaded dynamically -->
+                        </ul>
+                    </div>
+                </div>
+                <div class="registration-form">
+                    <form id="registrationForm">
+                        <div id="form-fields">
+                            <!-- Form fields will be loaded dynamically -->
+                        </div>
+                        <button type="submit" class="btn-primary">Confirmar Inscrição</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="coordination" class="coordination">
+        <div class="container">
+            <div class="section-header">
+                <h2 id="coordination-title">Loading...</h2>
+            </div>
+            <div class="coordination-content" id="coordination-content">
+                <!-- Coordinators will be loaded dynamically -->
+            </div>
+        </div>
     </section>
 
     <footer class="footer">
@@ -57,6 +126,7 @@
         </div>
     </footer>
 
+    <script src="content-loader.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
