@@ -5,58 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eventos Anteriores - JornaGEO</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        .events-list {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
-        .event-card {
-            background: #fff;
-            border-radius: 12px;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-            padding: 2rem;
-            margin-bottom: 2rem;
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-            transition: transform 0.2s;
-        }
-        .event-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.12);
-        }
-        .event-card img {
-            width: 120px;
-            height: 120px;
-            object-fit: cover;
-            border-radius: 8px;
-        }
-        .event-card-content h3 {
-            margin: 0 0 0.5rem 0;
-            color: #1a1a2e;
-        }
-        .event-card-content p {
-            margin: 0 0 1rem 0;
-            color: #555;
-        }
-        .event-card-content .btn-primary {
-            display: inline-block;
-            text-decoration: none;
-        }
-        .page-header {
-            text-align: center;
-            padding: 4rem 1rem 2rem;
-        }
-        .page-header h1 {
-            font-size: 2.5rem;
-            color: #1a1a2e;
-        }
-        .page-header p {
-            color: #555;
-            font-size: 1.1rem;
-        }
-    </style>
 </head>
 <body>
     <nav class="navbar">
@@ -71,22 +19,30 @@
         </div>
     </nav>
 
-    <div class="page-header">
-        <h1>Eventos Anteriores</h1>
-        <p>Confira as edições passadas da JornaGEO</p>
-    </div>
-
-    <main class="events-list">
-        <div class="event-card">
-            <img src="media/capa.jpeg" alt="JornaGEO 2025">
-            <div class="event-card-content">
-                <h3>JornaGEO 2025</h3>
-                <p>1ª Jornada de Gestão Estratégica de Organizações — "Desafios do Uso da Inteligência Artificial"</p>
-                <p><strong>18 e 19 de Novembro de 2025</strong> · IESB/SUL, Brasília</p>
-                <a href="2025/index.html" class="btn-primary">Ver Evento</a>
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <span class="hero-tag">JornaGEO 2025</span>
+                <div class="hero-image-center">
+                    <img src="media/capa.jpeg" alt="JornaGEO 2025" class="hero-cover-center">
+                </div>
+                <h1 class="hero-title">Desafios do Uso da Inteligência Artificial - 1ª Jornada de Gestão Estratégica de Organizações</h1>
+                <p class="hero-description">18 e 19 de Novembro de 2025 · IESB/SUL, Brasília</p>
             </div>
         </div>
-    </main>
+    </section>
+
+    <section id="schedule" class="schedule">
+        <div class="container">
+            <div class="section-header">
+                <h2>Programação</h2>
+                <p>Dois dias intensivos de aprendizado e networking</p>
+            </div>
+            <div class="schedule-content" id="schedule-content">
+                <!-- Loaded dynamically from content.json -->
+            </div>
+        </div>
+    </section>
 
     <footer class="footer">
         <div class="container">
@@ -94,6 +50,65 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', async function() {
+            const response = await fetch('./content.json');
+            const content = await response.json();
+            const schedule = content.schedule;
+            const scheduleContent = document.getElementById('schedule-content');
+
+            schedule.days.forEach(day => {
+                const dayDiv = document.createElement('div');
+                dayDiv.className = 'day-schedule';
+
+                const sessionsHtml = day.sessions.map(session => `
+                    <div class="session">
+                        <div class="session-time">${session.time}</div>
+                        <div class="session-title">${session.title}</div>
+                        ${session.speaker ? `
+                            <div class="session-speaker">
+                                ${session.speakers ? `
+                                    ${session.speakers.map(speaker => `
+                                        <div class="speaker-info">
+                                            <img src="${speaker.photo}" alt="${speaker.name}" class="speaker-photo">
+                                            <div class="speaker-details">
+                                                <div class="speaker-name">${speaker.name}</div>
+                                                <div class="speaker-links">
+                                                    ${speaker.lattes ? `<a href="${speaker.lattes}" target="_blank">Lattes</a>` : ''}
+                                                    ${speaker.linkedin ? `<a href="${speaker.linkedin}" target="_blank">LinkedIn</a>` : ''}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    `).join('')}
+                                ` : session.speakerInfo ? `
+                                    <div class="speaker-info">
+                                        <img src="${session.speakerInfo.photo}" alt="${session.speaker}" class="speaker-photo">
+                                        <div class="speaker-details">
+                                            <div class="speaker-name">${session.speaker}</div>
+                                            <div class="speaker-links">
+                                                ${session.speakerInfo.lattes ? `<a href="${session.speakerInfo.lattes}" target="_blank">Lattes</a>` : ''}
+                                                ${session.speakerInfo.linkedin ? `<a href="${session.speakerInfo.linkedin}" target="_blank">LinkedIn</a>` : ''}
+                                            </div>
+                                        </div>
+                                    </div>
+                                ` : `<span>${session.speaker}</span>`}
+                            </div>
+                        ` : ''}
+                    </div>
+                `).join('');
+
+                dayDiv.innerHTML = `
+                    <div class="day-header">
+                        <h3>${day.day}</h3>
+                        <p>${day.date}</p>
+                    </div>
+                    <div class="sessions">
+                        ${sessionsHtml}
+                    </div>
+                `;
+                scheduleContent.appendChild(dayDiv);
+            });
+        });
+    </script>
 </body>
 </html>
