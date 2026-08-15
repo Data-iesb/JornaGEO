@@ -2,51 +2,104 @@
   "hero": {
     "tag": "JornaGEO 2026",
     "title": "2ª Jornada de Gestão Estratégica de Organizações",
-    "description": "Em breve, mais informações sobre a próxima edição.<br> Fique atento!",
-    "primaryButton": "Inscreva-se",
+    "description": "Evento de Gestão Estratégica de Organizações em Brasília.<br> Conecte-se com líderes, gestores, acadêmicos e profissionais da área.",
+    "primaryButton": "Inscreva-se Gratuitamente",
     "secondaryButton": "Ver Programação",
     "stats": {
-      "participants": "—",
+      "participants": "+200",
       "participantsLabel": "participantes esperados",
-      "days": "—",
+      "days": "2",
       "daysLabel": "dias de evento"
     }
   },
   "about": {
     "title": "Sobre o Evento",
-    "subtitle": "Em breve",
-    "mainTitle": "JornaGEO 2026",
-    "description": "A ser definido.",
+    "subtitle": "Transformando organizações através da gestão orientada a evidências.<br> Presencial, IESB/SUL (SGAS, Quadra 613/614 - Asa Sul).<br> Aberto ao público - GRATUITO",
+    "mainTitle": "Uma Jornada de Liderança",
+    "description": "A JornaGEO 2026 é a segunda edição do evento focado na Gestão de Organizações na região Centro-Oeste. Nossa missão é promover o intercâmbio de conhecimentos, experiências e inovações entre gestores, líderes, acadêmicos e profissionais da área.",
     "features": [
       {
         "title": "🎯 Palestras Estratégicas",
-        "description": "A definir"
+        "description": "Líderes empresariais compartilhando estratégias de gestão eficazes"
       },
       {
         "title": "🔧 Workshops Práticos",
-        "description": "A definir"
+        "description": "Sessões hands-on para desenvolvimento de competências"
       },
       {
-        "title": "🤝 Networking",
-        "description": "A definir"
+        "title": "🤝 Networking Executivo",
+        "description": "Oportunidades de conexão com profissionais, acadêmicos e empresários"
       },
       {
         "title": "📊 Cases de Sucesso",
-        "description": "A definir"
+        "description": "Apresentação de casos reais de transformação organizacional"
       }
     ]
   },
   "schedule": {
     "title": "Programação",
-    "subtitle": "A ser divulgada em breve",
+    "subtitle": "Dois dias intensivos de aprendizado e networking",
     "days": [
       {
-        "date": "A definir",
+        "date": "Data a definir",
         "day": "Dia 1",
         "sessions": [
           {
-            "time": "—",
-            "title": "A definir",
+            "time": "18:30 - 19:00",
+            "title": "Credenciamento e Coffee Break",
+            "type": "break"
+          },
+          {
+            "time": "19:00 - 19:40",
+            "title": "Palestra de Abertura",
+            "speaker": "A confirmar",
+            "type": "keynote"
+          },
+          {
+            "time": "20:00 - 20:40",
+            "title": "Palestra 2",
+            "speaker": "A confirmar",
+            "type": "talk"
+          },
+          {
+            "time": "20:40 - 21:30",
+            "title": "Palestra 3",
+            "speaker": "A confirmar",
+            "type": "talk"
+          }
+        ]
+      },
+      {
+        "date": "Data a definir",
+        "day": "Dia 2",
+        "sessions": [
+          {
+            "time": "17:00 - 18:30",
+            "title": "Workshop Prático",
+            "speaker": "A confirmar",
+            "type": "workshop"
+          },
+          {
+            "time": "18:30 - 19:00",
+            "title": "Credenciamento e Coffee Break",
+            "type": "break"
+          },
+          {
+            "time": "19:00 - 19:45",
+            "title": "Palestra 4",
+            "speaker": "A confirmar",
+            "type": "talk"
+          },
+          {
+            "time": "20:00 - 20:40",
+            "title": "Palestra 5",
+            "speaker": "A confirmar",
+            "type": "talk"
+          },
+          {
+            "time": "20:40 - 21:30",
+            "title": "Palestra de Encerramento",
+            "speaker": "A confirmar",
             "type": "keynote"
           }
         ]
@@ -55,8 +108,8 @@
   },
   "registration": {
     "title": "Inscrição",
-    "subtitle": "Em breve",
-    "price": "A definir",
+    "subtitle": "Garanta sua vaga na 2ª Jornada de Gestão Estratégica de Organizações",
+    "price": "Gratuito",
     "includes": [
       "Acesso a todas as palestras e workshops",
       "Material didático digital",
@@ -70,7 +123,23 @@
         {"name": "email", "label": "E-mail", "type": "email", "required": true},
         {"name": "organization", "label": "Organização", "type": "text", "required": false},
         {"name": "position", "label": "Cargo/Função", "type": "text", "required": false},
-        {"name": "phone", "label": "Telefone", "type": "tel", "required": false}
+        {"name": "phone", "label": "Telefone", "type": "tel", "required": false},
+        {"name": "management_area", "label": "Área de Gestão", "type": "select", "required": false, "options": [
+          "Administração de Empresas",
+          "Ciência de Dados e Inteligência Artificial",
+          "Empreendedorismo e Inovação",
+          "Finanças Corporativas",
+          "Gestão de Pessoas/RH",
+          "Gestão de Projetos",
+          "Gestão Estratégica",
+          "Gestão Pública",
+          "Indústria 4.0/Transformação Digital",
+          "Liderança e Desenvolvimento Organizacional",
+          "Marketing Estratégico",
+          "Políticas Públicas",
+          "Sustentabilidade e ESG",
+          "Outra"
+        ]}
       ]
     }
   },
@@ -79,10 +148,33 @@
     "coordinators": [
       {
         "section": "Coordenação do JornaGEO 2026",
-        "name": "A definir",
-        "photo": "media/logo.jpeg",
-        "lattes": "",
+        "name": "Prof. Sérgio da Costa Côrtes",
+        "photo": "media/2025/sergio.JPG",
+        "lattes": "http://lattes.cnpq.br/1206696860799261",
+        "linkedin": "https://www.linkedin.com/in/s%C3%A9rgio-da-costa-c%C3%B4rtes-01032951/"
+      },
+      {
+        "section": "Coordenação do JornaGEO 2026",
+        "name": "Professora Simone de Araújo Góes Assis",
+        "photo": "media/2025/Simone.png",
+        "lattes": "http://lattes.cnpq.br/1014598931590283",
         "linkedin": ""
+      },
+      {
+        "section": "Coordenação do JornaGEO 2026",
+        "name": "Professora Helga Cristina Hedler",
+        "photo": "media/2025/Helga.png",
+        "lattes": "http://lattes.cnpq.br/9878306773047270",
+        "linkedin": "https://www.linkedin.com/in/helga-cristina-hedler-03bbb094/"
+      },
+      {
+        "section": "Coordenação do Mestrado em Gestão Estratégica de Organizações do IESB",
+        "name": "Professor André Rehbein Sathler Guimarães",
+        "photo": "media/2025/Andre.png",
+        "lattes": "http://lattes.cnpq.br/9394532830433721",
+        "linkedin": "https://www.linkedin.com/in/andresathler/",
+        "website": "https://conteudos.iesb.br/mestradoprofissional",
+        "phone": "(61) 99269-4999"
       }
     ]
   }
