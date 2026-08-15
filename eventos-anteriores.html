@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos Anteriores - JornaGEO</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .events-list {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        .event-card {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            transition: transform 0.2s;
+        }
+        .event-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+        }
+        .event-card img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .event-card-content h3 {
+            margin: 0 0 0.5rem 0;
+            color: #1a1a2e;
+        }
+        .event-card-content p {
+            margin: 0 0 1rem 0;
+            color: #555;
+        }
+        .event-card-content .btn-primary {
+            display: inline-block;
+            text-decoration: none;
+        }
+        .page-header {
+            text-align: center;
+            padding: 4rem 1rem 2rem;
+        }
+        .page-header h1 {
+            font-size: 2.5rem;
+            color: #1a1a2e;
+        }
+        .page-header p {
+            color: #555;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="media/logo.jpeg" alt="JornaGEO" class="logo-img">
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="eventos-anteriores.html" class="active">Eventos Anteriores</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="page-header">
+        <h1>Eventos Anteriores</h1>
+        <p>Confira as edições passadas da JornaGEO</p>
+    </div>
+
+    <main class="events-list">
+        <div class="event-card">
+            <img src="media/capa.jpeg" alt="JornaGEO 2025">
+            <div class="event-card-content">
+                <h3>JornaGEO 2025</h3>
+                <p>1ª Jornada de Gestão Estratégica de Organizações — "Desafios do Uso da Inteligência Artificial"</p>
+                <p><strong>18 e 19 de Novembro de 2025</strong> · IESB/SUL, Brasília</p>
+                <a href="2025/index.html" class="btn-primary">Ver Evento</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 JornaGEO. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

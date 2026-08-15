@@ -1,0 +1,254 @@
+{
+  "hero": {
+    "tag": "JornaGEO 2025",
+    "title": "Desafios do Uso da Inteligência Artificial - 1ª Jornada de Gestão Estratégica de Organizações ",
+    "description": "Evento de Gestão Estratégica de Organizações em Brasília.<br> Conecte-se com líderes, gestores, acadêmicos e profissionais da área.<br> Vivencie a experiência de interagir com a IA aplicada a Gestão.",
+    "primaryButton": "Inscreva-se Gratuitamente",
+    "secondaryButton": "Ver Programação",
+    "stats": {
+      "participants": "+150",
+      "participantsLabel": "participantes esperados",
+      "days": "2",
+      "daysLabel": "dias de evento"
+    }
+  },
+  "about": {
+    "title": "Sobre o Evento",
+    "subtitle": "Transformando organizações através da gestão orientada a evidências.<br> Presencial, IESB/SUL (SGAS, Quadra 613/614 - Asa Sul).<br> Aberto ao público - GRATUITO",
+    "mainTitle": "Uma Jornada de Liderança",
+    "description": "A JornaGEO 2025 é focado na Gestão de Organizações na região Centro-Oeste. Nossa missão é promover o intercâmbio de conhecimentos, experiências e inovações entre gestores, líderes, acadêmicos e profissionais da área.",
+    "features": [
+      {
+        "title": "🎯 Palestras Estratégicas",
+        "description": "Líderes empresariais compartilhando estratégias de gestão eficazes"
+      },
+      {
+        "title": "🔧 Workshops Práticos",
+        "description": "Sessões hands-on para desenvolvimento de competências em Ciência de Dados e Inteligência Artificial."
+      },
+      {
+        "title": "🤝 Networking Executivo",
+        "description": "Oportunidades de conexão com profissionais, acadêmicos e empresários"
+      },
+      {
+        "title": "📊 Cases de Sucesso",
+        "description": "Apresentação de casos reais de transformação organizacional"
+      }
+    ]
+  },
+  "schedule": {
+    "title": "Programação",
+    "subtitle": "Dois dias intensivos de aprendizado e networking",
+    "days": [
+      {
+        "date": "18 de Novembro",
+        "day": "Dia 1",
+        "sessions": [
+          {
+            "time": "18:30 - 19:00",
+            "title": "Credenciamento e Coffee Break",
+            "type": "break"
+          },
+          {
+            "time": "19:00 - 19:40",
+            "title": "Abertura: Estratégias Inovadoras e Transformação Digital",
+            "speaker": "Prof. Dr. Márcio Lopes Pimenta",
+            "speakerInfo": {
+              "photo": "../media/Marcio.jpg",
+              "lattes": "http://lattes.cnpq.br/3026927581342826",
+              "linkedin": ""
+            },
+            "type": "keynote"
+          },
+          {
+            "time": "20:00 - 20:40",
+            "title": "A importância da Gestão de Dados e Informações para geração de Conhecimentos na Economia Moderna",
+            "speaker": "Prof. Dr. Eduardo Pereira Nunes  -  ex-Presidente do IBGE (2003-2011)",
+            "speakerInfo": {
+              "photo": "../media/eduardo.png",
+              "lattes": "http://lattes.cnpq.br/4403156993221838",
+              "linkedin": "https://www.linkedin.com/in/eduardo-pereira-nunes-32a59534/"
+            },
+            "type": "workshop"
+          },
+          {
+            "time": "20:40 - 21:30",
+            "title": "Desafios com o uso da Inteligência Artificial (IA) na formação de Recursos Humanos nas Organizações",
+            "speaker": "Professora Helga Cristina Hedler e Professora Beatriz Amália Albarello",
+            "speakers": [
+              {
+                "name": "Professora Helga Cristina Hedler",
+                "photo": "../media/Helga.png",
+                "lattes": "http://lattes.cnpq.br/9878306773047270",
+                "linkedin": "https://www.linkedin.com/in/helga-cristina-hedler-03bbb094/"
+              },
+              {
+                "name": "Professora Beatriz Amália Albarello",
+                "photo": "../media/Beatriz.png",
+                "lattes": "http://lattes.cnpq.br/9267084024389682",
+                "linkedin": "https://www.linkedin.com/in/beatriz-am%C3%A1lia-a-25b08224"
+              }
+            ],
+            "type": "talk"
+          }
+        ]
+      },
+      {
+        "date": "19 de Novembro",
+        "day": "Dia 2",
+        "sessions": [
+          {
+            "time": "17:00 - 18:30",
+            "title": "Laboratório prático de Ciência de Dados e Inteligência Artificial",
+            "speaker": "Prof. Dr. Sérgio da Costa Côrtes",
+            "speakerInfo": {
+              "photo": "../media/sergio.JPG",
+              "lattes": "http://lattes.cnpq.br/1206696860799261",
+              "linkedin": "https://www.linkedin.com/in/s%C3%A9rgio-da-costa-c%C3%B4rtes-01032951/"
+            },
+            "type": "keynote"
+          },
+          {
+            "time": "18:30 - 19:00",
+            "title": "Credenciamento e Coffee Break",
+            "type": "break"
+          },
+          {
+            "time": "19:00 - 19:45",
+            "title": "The Human Capacity Challenge in AI Adoption: Navigating Skills and Workforce Readiness",
+            "speaker": "Ms. Liz Moran (Director, Academic Programs and Certification at SAS Institute - USA)",
+            "speakerInfo": {
+              "photo": "../media/Liz.png",
+              "lattes": "",
+              "linkedin": "https://www.linkedin.com/in/moranliz/"
+            },
+            "type": "talk"
+          },
+          {
+            "time": "20:00 - 20:40",
+            "title": "Transformação Digital e os Impactos da Inteligência Artificial nas Organizações",
+            "speaker": "Leandro Namora Magdalena  -  International Business Executive, Sales Leader, Partners' Sales and Developmente Strategies, Digital Transformation.",
+            "speakerInfo": {
+              "photo": "../media/Leandro.png",
+              "lattes": "http://lattes.cnpq.br/5847954927282514",
+              "linkedin": "https://www.linkedin.com/in/lnmagdalena/"
+            },
+            "type": "workshop"
+          },
+         {
+            "time": "20:40 - 21:30",
+            "title": "Integração Cloud-Fog-Edge: Otimizando a Gestão Estratégica com Arquiteturas Híbridas Inteligentes - Uma abordagem moderna para o uso de tecnologias distribuídas com foco em eficiência, inovação e vantagem competitiva nas organizações.",
+            "speaker": "Prof. Dr. Rômulo Ferreira dos Santos",
+            "speakerInfo": {
+              "photo": "../media/Romulo_new.png",
+              "lattes": "http://lattes.cnpq.br/2400318225577123",
+              "linkedin": "https://www.linkedin.com/in/profromulosantos/"
+            },
+            "type": "talk"
+          }
+        ]
+      }
+    ]
+  },
+  "registration": {
+    "title": "Inscrição",
+    "subtitle": "Garante sua vaga no maior evento de gestão organizacional",
+    "price": "Gratuito",
+    "includes": [
+      "Acesso a todas as palestras e workshops",
+      "Material didático digital",
+      "Coffee breaks",
+      "Certificado de participação",
+      "Acesso ao networking exclusivo"
+    ],
+    "form": {
+      "fields": [
+        {"name": "name", "label": "Nome Completo", "type": "text", "required": true},
+        {"name": "email", "label": "E-mail", "type": "email", "required": true},
+        {"name": "organization", "label": "Organização", "type": "text", "required": false},
+        {"name": "position", "label": "Cargo/Função", "type": "text", "required": false},
+        {"name": "phone", "label": "Telefone", "type": "tel", "required": false},
+        {"name": "management_area", "label": "Área de Gestão", "type": "select", "required": false, "options": [
+          "Administração de Empresas",
+          "Branding e Experiência do Cliente",
+          "Cadeias de Suprimentos",
+          "Ciência de Dados e Inteligência Artificial",
+          "Comunicação Empresarial",
+          "Contabilidade Gerencial",
+          "Controladoria e Auditoria",
+          "Cultura e Clima Organizacional",
+          "Desenvolvimento Sustentável",
+          "Empreendedorismo e Inovação",
+          "Ensino de Administração",
+          "ESG e Sustentabilidade Corporativa",
+          "Ética e Responsabilidade Social",
+          "Finanças Corporativas",
+          "Formação Docente",
+          "Governança Ambiental",
+          "Gestão da Inovação e Startups",
+          "Gestão da Produção e Operações",
+          "Gestão de Organizações Sociais",
+          "Gestão de Pessoas/RH",
+          "Gestão de Projetos",
+          "Gestão Estratégica",
+          "Gestão Pública",
+          "Indústria 4.0/Transformação Digital",
+          "Liderança e Desenvolvimento Organizacional",
+          "Logística",
+          "Marketing Estratégico",
+          "Métodos Quantitativos e Qualitativos",
+          "Mídias Digitais",
+          "Orçamento Público",
+          "Pesquisa Acadêmica em Gestão",
+          "Planejamento e Avaliação de Programas",
+          "Planejamento e Governança",
+          "Políticas Públicas",
+          "Psicologia Organizacional",
+          "Qualidade e Processos",
+          "Responsabilidade Social",
+          "Sistemas de Informação Gerencial",
+          "Sustentabilidade",
+          "Transparência e Controle Social",
+          "Outra"
+        ]},
+        {"name": "ai_session", "label": "Quero participar da \"Sessão hands-on\" de Ciências de Dados e IA no dia 19 de Novembro às 17h", "type": "checkbox", "required": false}
+      ]
+    }
+  },
+  "coordination": {
+    "title": "Coordenação",
+    "coordinators": [
+      {
+        "section": "Coordenação do JornaGEO 2025",
+        "name": "Prof. Sérgio da Costa Côrtes",
+        "photo": "../media/sergio.JPG",
+        "lattes": "http://lattes.cnpq.br/1206696860799261",
+        "linkedin": "https://www.linkedin.com/in/s%C3%A9rgio-da-costa-c%C3%B4rtes-01032951/"
+      },
+      {
+        "section": "Coordenação do JornaGEO 2025",
+        "name": "Professora Simone de Araújo Góes Assis",
+        "photo": "../media/Simone.png",
+        "lattes": "http://lattes.cnpq.br/1014598931590283",
+        "linkedin": ""
+      },
+      {
+        "section": "Coordenação do JornaGEO 2025",
+        "name": "Professora Helga Cristina Hedler",
+        "photo": "../media/Helga.png",
+        "lattes": "http://lattes.cnpq.br/9878306773047270",
+        "linkedin": "https://www.linkedin.com/in/helga-cristina-hedler-03bbb094/"
+      },
+      {
+        "section": "Coordenação do Mestrado em Gestão Estratégica de Organizações do IESB",
+        "name": "Professor André Rehbein Sathler Guimarães",
+        "photo": "../media/Andre.png",
+        "lattes": "http://lattes.cnpq.br/9394532830433721",
+        "linkedin": "https://www.linkedin.com/in/andresathler/",
+        "website": "https://conteudos.iesb.br/mestradoprofissional",
+        "phone": "(61) 99269-4999    (https://conteudos.iesb.br/mestradoprofissional)",
+        "website": "https://conteudos.iesb.br/mestradoprofissional"
+      }
+    ]
+  }
+}
